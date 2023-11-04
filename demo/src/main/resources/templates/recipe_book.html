@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#ff7f50">
+<table>
+    <thead></thead>
+    <tbody>
+    <tr th:if="${recipeList.empty}">
+        <td>No recipes!</td>
+    </tr>
+    <tr th:each="recipe:${recipeList}">
+        <td><p align="center"><h1><span th:text="${recipe.name}">Name</span></h1></p></td>
+    </tr>
+    <tr th:each="recipe:${recipeList}">
+    <td><p><h4><span th:text="${recipe.ingredients}">Ingredients</span></h4></p></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
